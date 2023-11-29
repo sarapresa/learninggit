@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Adicionar Biblioteca CSS (Bootstrap) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <!-- Adicionar FavIcon -->
+        <link rel="icon" type="image/jpg" href="cv.jpg">
+        <title>Curriculum Vitae</title>
+        <style>
+            ul {
+                columns: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+        <h1><a href="https://www.ua.pt/pt/estga/" target="_blank">Superior de Tecnologia e Gestão de Águeda</a></h1>
+        <h2>Curriculum Vitae</h2>
+        <hr> <!-- Adicionar Linha -->
+        <img src="cv.jpg" alt="cv">
+        <br>
+        <br>
+        <h5>Instruções para preenchimento</h5>
+        <br>
+        <!-- Adicionar Lista -->
+        <ul>
+            <li>Preencha todos os campos em minúsculas.</li>
+            <li>Faça um breve resumo da sua experiência profissional.</li>
+            <li>Indique uma ou mais habilitações literárias.</li>
+            <li>Em caso de dúvida contacte-nos.</li>
+        </ul> 
+        <hr>
+       
+            <form action="http://tecla.estga.ua.pt/formulario.php" method="POST">
+            <fieldset class="border p-2">
+                <legend>Informações CV</legend>
+                <div class="mb-3"> 
+                    <label class="form-label" for="nome">Nome:</label>
+                    <input class="form-control" id="nome" type="text" name="nome">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password">Password:</label>
+                    <input class="form-control" id="password" type="password" name="password">
+                </div>
+                <div class="mb-3">
+                    <label class="form-check-label" for="viatura">Viatura Própria</label>
+                    <input id="viatura" type="hidden" name="viatura" value="Não">
+                    <input class="form-check-input" id="viatura" type="checkbox" name="viatura" value="Sim">
+                </div>
+                <div class="mb-3">
+                    <label class="form-check-label" for="computador">Computador</label>
+                    <input id="computador" type="hidden" name="computador" value="Não tem">
+                    <input class="form-check-input" id="computador" type="checkbox" name="computador" value="Tem">
+                </div>
+                <div class="mb-3">
+                    <label for="habilitacoes">Habilitações Literárias:</label>
+                    <div class="form-check">
+                        <label class="form-check-label" for="licenciatura">Licenciatura</label>
+                        <input class="form-check-input" id="licenciatura" type="radio" name="habilitacoes" value="Licenciatura">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="mestrado">Mestrado</label>
+                        <input class="form-check-input" id="mestrado" type="radio" name="habilitacoes" value="Mestrado">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="dorturamento">Douturamento</label>
+                        <input class="form-check-input" id="douturamento" type="radio" name="habilitacoes" value="Douturamento">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="experiencia">Experiência profissional</label>
+                    <textarea class="form-control" id="experiencia" name="experiencia"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="idade">Idade</label>
+                    <select class="form-select" id="idade" name="idade">
+                        <option value="18-20">18-20</option>
+                        <option value="21-30">21-30</option>
+                        <option value="31-50">31-50</option>
+                        <option value="50+">50+</option>
+                    </select>
+                </div>
+                <button type="submit"><img src="ok.gif" alt="enviar"></button>
+                <button type="reset" class="btn btn-danger">Apagar</button>
+            </fieldset>
+            </form>
+        
+        </div>
+    </body>
+</html>
